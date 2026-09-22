@@ -1,0 +1,25 @@
+# Example series config. Copy to "configs/<series folder name>.toml", e.g.
+# "configs/Manga_Title.toml" for volumes under
+# "...\Manga_Title\". Every key is optional. Other files in configs/
+# are git-ignored, so your own configs stay local.
+
+# Filename prefix. {volume} is the volume number from the folder name
+# ("Volume 13", "Manga_Title_v26_(Ch219-228)"); {volume:02} zero-pads it.
+prefix = "Manga_Title_v{volume:02}"
+
+# Default answers to the filename questions.
+toc_page = "004.jpg"
+first_chapter_file = "005.jpg"
+
+# Usual chapter length. Helps the TOC reader reject misread page numbers.
+typical_chapter_pages = 16
+
+# Table-of-contents OCR tuning:
+# Where right-edge page-number columns start, as fractions of page width.
+# column_crops = [0.84, 0.88, 0.90]
+# Regex for a chapter marker, with one group for its number.
+# chapter_marker = '(?<![A-Za-z])STEP\s*(\S+)'
+
+# Folder-name patterns (regexes):
+# volume_pattern = '(?i)(?<![a-z])(?:volume|vol\.?|v)[\s_]*(\d+)'
+# chapter_range_pattern = '(?i)\(\s*ch\.?\s*(\d+)\s*-\s*(\d+)\s*\)'
